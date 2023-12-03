@@ -10,7 +10,7 @@ import (
 //go:embed input
 var input string
 
-func Part1() (int, error) {
+func Part1() int {
 
 	max := map[string]int{
 		"red":   12,
@@ -32,13 +32,13 @@ gameLoop:
 
 				num, err := strconv.Atoi(number)
 				if err != nil {
-					return 0, fmt.Errorf("number: %v", err)
+					panic(fmt.Errorf("number: %v", err))
 				}
 
 				if max[color] < num {
 					idNum, err := strconv.Atoi(id[5:])
 					if err != nil {
-						return 0, fmt.Errorf("id: %v", err)
+						panic(fmt.Errorf("id: %v", err))
 					}
 					sum += idNum
 					continue gameLoop
@@ -47,10 +47,10 @@ gameLoop:
 		}
 	}
 
-	return 5050 - sum, nil
+	return 5050 - sum
 }
 
-func Part2() (int, error) {
+func Part2() int {
 
 	sum := 0
 
@@ -68,7 +68,7 @@ func Part2() (int, error) {
 
 				num, err := strconv.Atoi(number)
 				if err != nil {
-					return 0, fmt.Errorf("number: %v", err)
+					panic(fmt.Errorf("number: %v", err))
 				}
 
 				if gameMaxes[color] < num {
@@ -85,5 +85,5 @@ func Part2() (int, error) {
 
 	}
 
-	return sum, nil
+	return sum
 }

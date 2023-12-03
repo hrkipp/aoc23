@@ -8,7 +8,7 @@ import (
 //go:embed input
 var input string
 
-func Part1() (int, error) {
+func Part1() int {
 
 	sum := 0
 
@@ -35,11 +35,11 @@ func Part1() (int, error) {
 		sum += first*10 + last
 
 	}
-	return sum, nil
+	return sum
 
 }
 
-func Part2() (int, error) {
+func Part2() int {
 
 	sum := 0
 
@@ -75,7 +75,7 @@ func Part2() (int, error) {
 		sum += first*10 + last
 
 	}
-	return sum, nil
+	return sum
 
 }
 
