@@ -6,6 +6,7 @@ import (
 	"github.com/hrkipp/aoc23/day1"
 	"github.com/hrkipp/aoc23/day2"
 	"github.com/hrkipp/aoc23/day3"
+	"github.com/hrkipp/aoc23/day4"
 )
 
 func main() {
@@ -15,4 +16,6 @@ func main() {
 	fmt.Println("Day 2 Part 2: ", day2.Part2())
 	fmt.Println("Day 3 Part 1: ", day3.Part1())
 	fmt.Println("Day 3 Part 2: ", day3.Part2())
+	fmt.Println("Day 4 Part 1: ", day4.Part1())
+	fmt.Println("Day 4 Part 1: ", day4.Part2())
 }

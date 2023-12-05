@@ -2,7 +2,6 @@ package day3
 
 import (
 	_ "embed"
-	"fmt"
 	"regexp"
 	"strconv"
 	"strings"
@@ -143,13 +142,6 @@ func Part2() int {
 
 			if len(numbers) == 2 {
 				sum += numbers[0] * numbers[1]
-			} else {
-				fmt.Println(lines[lineNum-1][charNum-4 : charNum+4])
-				fmt.Println(line[charNum-4 : charNum+4])
-				fmt.Println(lines[lineNum+1][charNum-4 : charNum+4])
-				fmt.Println(numbers)
-				fmt.Println()
-
 			}
 		}
 	}
